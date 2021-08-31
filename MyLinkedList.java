@@ -14,7 +14,7 @@ public class MyLinkedList<K> {
 	}
 	/**
 	 * this methods adds a new element to the linked list
-	 * @param newNode the value of the element of new node
+	 * @param newNode the value of the  of new node
 	 * @return nothing
 	 */
 	public void add(INode<K> newNode) {
@@ -28,6 +28,22 @@ public class MyLinkedList<K> {
 			INode<K>tempNode = this.head;
 			this.head = newNode;
 			this.head.setNext(tempNode);
+		}
+	}
+	/**
+	 * this method to append a new element to the linked list
+	 * @param newNode the value of the  of new node
+	 */
+	public void append(INode<K> newNode) {
+		if(this.head == null) {
+			this.head = newNode;
+		}
+		if(this.tail == null) {
+			this.tail = newNode;
+		}
+		else {
+			this.tail.setNext(newNode);
+			this.tail = newNode;
 		}
 	}
 	/**
