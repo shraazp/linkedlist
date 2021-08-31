@@ -74,10 +74,28 @@ public class MyLinkedListTest {
 			System.out.println("nodes are not added:");
 	}
 	
+	public static void insertBetween()
+	{
+		MyNode<Integer> myFirstNode = new MyNode<>(56);
+		MyNode<Integer> mySecondNode = new MyNode<>(30);
+		MyNode<Integer> myThirdNode = new MyNode<>(70);
+		
+		MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+		myLinkedList.add(myFirstNode);
+		myLinkedList.append(myThirdNode);
+		myLinkedList.insert(myFirstNode,mySecondNode);
+		if(myLinkedList.head.equals(myFirstNode) && myLinkedList.head.getNext().equals(mySecondNode) &&	 myLinkedList.tail.equals(myThirdNode))
+		{
+			myLinkedList.printMyNodes();
+		}else {
+			System.out.println("Error") ;
+		}
+	}
 	
 	public static void main(String [] args) {
 		//createLinkedlist();
 		//addNewNode();
-		appendNode();
+		//appendNode();
+		insertBetween();
 	}
 }
