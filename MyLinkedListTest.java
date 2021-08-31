@@ -73,7 +73,9 @@ public class MyLinkedListTest {
 		else
 			System.out.println("nodes are not added:");
 	}
-	
+	/**
+	 * this method to add element between two nodes
+	 */
 	public static void insertBetween()
 	{
 		MyNode<Integer> myFirstNode = new MyNode<>(56);
@@ -91,7 +93,9 @@ public class MyLinkedListTest {
 			System.out.println("Error") ;
 		}
 	}
-	
+	/**
+	 * this method to call the method to delete first element
+	 */
 	public static void deleteFirst()
 	{
 		MyNode<Integer> myFirstNode = new MyNode<>(70);
@@ -106,11 +110,29 @@ public class MyLinkedListTest {
 		System.out.println(temp.getKey()+" has been deleted");
 		myLinkedList.printMyNodes();
 	}
+	/**
+	 * this method to delete last node
+	 */
+	public static void deleteLast()
+	{
+		MyNode<Integer> myFirstNode = new MyNode<>(70);
+		MyNode<Integer> mySecondNode = new MyNode<>(30);
+		MyNode<Integer> myThirdNode = new MyNode<>(56);
+		
+		MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+		myLinkedList.add(myFirstNode);
+		myLinkedList.add(mySecondNode);
+		myLinkedList.add(myThirdNode);
+		INode<Integer> temp =myLinkedList.popLast();
+		System.out.println(temp.getKey()+" has been deleted");
+		myLinkedList.printMyNodes();
+	}
 	public static void main(String [] args) {
 		//createLinkedlist();
 		//addNewNode();
 		//appendNode();
 		insertBetween();
-		deleteFirst();
+		//deleteFirst();
+		deleteLast();
 	}
 }
