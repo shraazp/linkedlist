@@ -129,6 +129,7 @@ public class MyLinkedListTest {
 	}
 	/**
 	 * method to search for an element
+	 * @return nothing
 	 */
 	public static void search()
 	{
@@ -147,13 +148,39 @@ public class MyLinkedListTest {
 			System.out.println(result.getKey()+" found !!Search is successfull");
 		myLinkedList.printMyNodes();
 	}
+	/**
+	 * method to insert after a specified node
+	 * @return nothing
+	 */
+	public static void insertAfterSpecified()
+	{
+		MyNode<Integer> myFirstNode = new MyNode<>(56);
+		MyNode<Integer> mySecondNode = new MyNode<>(30);
+		MyNode<Integer> myThirdNode = new MyNode<>(70);
+		MyNode<Integer> myFourthNode = new MyNode<>(40);
+		
+		MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+		myLinkedList.add(myFirstNode);
+		myLinkedList.append(mySecondNode);
+		myLinkedList.append(myThirdNode);
+		INode<Integer> temp = myLinkedList.search(30);
+		if(temp != null) {
+			INode<Integer> next = temp.getNext();
+			temp.setNext(myFourthNode);
+			myFourthNode.setNext(next);
+		}else {
+			System.out.println("Element not found");
+		}
+		myLinkedList.printMyNodes();
+	}
 	public static void main(String [] args) {
 		//createLinkedlist();
 		//addNewNode();
 		//appendNode();
-		insertBetween();
+		//insertBetween();
 		//deleteFirst();
 		//deleteLast();
-		search();
+		//search();
+		insertAfterSpecified();
 	}
 }
