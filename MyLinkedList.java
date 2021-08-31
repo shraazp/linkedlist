@@ -81,6 +81,21 @@ public class MyLinkedList<K> {
 		return curNode;
 	}
 	/**
+	 * this method searches for an element in linked list
+	 * @param Key the element which has to be started
+	 * @return the node if element is present
+	 */
+	public INode<K> search(K Key) {
+		INode<K> tempNode = head;
+		while(tempNode != null && tempNode.getNext() != null) {
+			if (tempNode.getKey().equals(Key)){
+				return tempNode;
+			}
+			tempNode = tempNode.getNext();
+		}
+		return null;
+	}
+	/**
 	 * method to print the nodes of linked list
 	 * @return nothing
 	 */

@@ -127,12 +127,33 @@ public class MyLinkedListTest {
 		System.out.println(temp.getKey()+" has been deleted");
 		myLinkedList.printMyNodes();
 	}
+	/**
+	 * method to search for an element
+	 */
+	public static void search()
+	{
+		MyNode<Integer> myFirstNode = new MyNode<>(70);
+		MyNode<Integer> mySecondNode = new MyNode<>(30);
+		MyNode<Integer> myThirdNode = new MyNode<>(56);
+	
+		MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+		myLinkedList.add(myFirstNode);
+		myLinkedList.add(mySecondNode);
+		myLinkedList.add(myThirdNode);
+		INode<Integer> result = myLinkedList.search(30);
+		if(result == null)
+			System.out.println("Element not found");
+		else
+			System.out.println(result.getKey()+" found !!Search is successfull");
+		myLinkedList.printMyNodes();
+	}
 	public static void main(String [] args) {
 		//createLinkedlist();
 		//addNewNode();
 		//appendNode();
 		insertBetween();
 		//deleteFirst();
-		deleteLast();
+		//deleteLast();
+		search();
 	}
 }
