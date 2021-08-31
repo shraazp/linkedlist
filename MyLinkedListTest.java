@@ -12,13 +12,18 @@ public class MyLinkedListTest {
 		MyNode<Integer> myFirstNode = new MyNode<>(56);
 		MyNode<Integer> mySecondNode = new MyNode<>(30);
 		MyNode<Integer> myThirdNode = new MyNode<>(70);
-		myFirstNode.setNext(mySecondNode);
-		mySecondNode.setNext(myThirdNode);
-		if(myFirstNode.getNext().equals(mySecondNode) && mySecondNode.getNext().equals(myThirdNode))
-			System.out.println("Linked list is created!!");
-		else 
-			System.out.println("Linked list not created!!!");
+		MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+		myLinkedList.add(myFirstNode);
+		myLinkedList.add(mySecondNode);
+		myLinkedList.add(myThirdNode);
+		if( myLinkedList.head.equals(myThirdNode) &&myLinkedList.head.getNext().equals(mySecondNode) &&	
+						 myLinkedList.tail.equals(myFirstNode))
+		{
+			System.out.println("Linked list is created:");
+			myLinkedList.printMyNodes();
 		}
+		else
+			System.out.println("Linked list is not created:");
 	}
 	
-
+}
