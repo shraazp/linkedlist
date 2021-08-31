@@ -58,6 +58,15 @@ public class MyLinkedList<K> {
 		newNode.setNext(tempNode);
 	}
 	/**
+	 * method o delete the first element of the linked list
+	 * @return new head
+	 */
+	public INode<K> pop(){
+		INode<K> tempNode = this.head;
+		this.head = head.getNext();
+		return tempNode;
+	}
+	/**
 	 * method to print the nodes of linked list
 	 * @return nothing
 	 */
