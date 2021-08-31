@@ -173,6 +173,22 @@ public class MyLinkedListTest {
 		}
 		myLinkedList.printMyNodes();
 	}
+	public static void deleteAfterSpecified()
+	{
+		MyNode<Integer> myFirstNode = new MyNode<>(56);
+		MyNode<Integer> mySecondNode = new MyNode<>(30);
+		MyNode<Integer> myThirdNode = new MyNode<>(40);
+		MyNode<Integer> myFourthNode = new MyNode<>(70);
+		MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+		myLinkedList.add(myFirstNode);
+		myLinkedList.append(mySecondNode);
+		myLinkedList.append(myThirdNode);
+		myLinkedList.append(myFourthNode);
+		INode<Integer> head = myLinkedList.deleteSpecified(40);
+		int count = myLinkedList.countNode(head);
+		System.out.println("Number of nodes in a linked list are "+count);
+		myLinkedList.printMyNodes();
+	}
 	public static void main(String [] args) {
 		//createLinkedlist();
 		//addNewNode();
@@ -182,5 +198,6 @@ public class MyLinkedListTest {
 		//deleteLast();
 		//search();
 		insertAfterSpecified();
+		deleteAfterSpecified();
 	}
 }

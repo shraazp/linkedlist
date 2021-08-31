@@ -96,6 +96,46 @@ public class MyLinkedList<K> {
 		return null;
 	}
 	/**
+	 * this method deletes specified node
+	 * first it searches for node then deletes it
+	 * @param Key element which you want to delete
+	 * @return head
+	 */
+	public INode<K> deleteSpecified(K Key) {
+		
+		if(head == null || head.getNext() == null) {
+			return null;
+		}
+		INode<K> curNode = head;
+		INode<K> prevNode = null;
+		
+		while(curNode != null && curNode.getKey() != Key) {
+			prevNode = curNode;
+			curNode = curNode.getNext();
+		}
+		prevNode.setNext(curNode.getNext());
+		return head;
+	}
+	/**
+	 * to count the number of elements
+	 * @param head the head of linked list is sent
+	 * @return number of nodes
+	 */
+	public int countNode(INode<K> head) {
+		INode<K> tempNode = head;
+		if(tempNode == null)
+			return 0;
+		if(tempNode.getNext() == null)
+			return 1;
+		int count = 0;
+		while(tempNode != null && tempNode.getNext() != null) {
+			tempNode = tempNode.getNext();
+			count++;
+		}
+		return count+1;
+	
+	}
+	/**
 	 * method to print the nodes of linked list
 	 * @return nothing
 	 */
