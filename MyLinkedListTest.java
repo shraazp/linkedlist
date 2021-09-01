@@ -35,14 +35,16 @@ public class MyLinkedListTest {
 	 */
 	public static void addNewNode()
 	{
-		MyNode<Integer> myFirstNode = new MyNode<>(560);
-		MyNode<Integer> mySecondNode = new MyNode<>(300);
-		MyNode<Integer> myThirdNode = new MyNode<>(70);
+		MyNode<Integer> myFirstNode = new MyNode<>(56);
+		MyNode<Integer> mySecondNode = new MyNode<>(30);
+		MyNode<Integer> myThirdNode = new MyNode<>(40);
+		MyNode<Integer> myFourthNode = new MyNode<>(70);
 		SortedLinkedList<Integer> myLinkedList = new SortedLinkedList<Integer>();
 		myLinkedList.add(myFirstNode);
 		myLinkedList.add(mySecondNode);
 		myLinkedList.add(myThirdNode);
-		if( myLinkedList.head.equals(myThirdNode) &&myLinkedList.head.getNext().equals(mySecondNode) &&	
+		myLinkedList.add(myFourthNode);
+		if( myLinkedList.head.equals(myFourthNode) &&myLinkedList.head.getNext().equals(myThirdNode) &&	
 						 myLinkedList.tail.equals(myFirstNode))
 		{
 			System.out.println("Nodes are added:");
