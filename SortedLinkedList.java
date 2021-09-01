@@ -5,10 +5,10 @@ package linkedlist;
  * @version 16.0
  * @param <K> the data type of the elements of linked list
  */
-public class MyLinkedList<K> {
+public class SortedLinkedList<K>  {
 	public INode<K> head;
 	public INode<K> tail;
-	public MyLinkedList() {
+	public SortedLinkedList() {
 		this.head = null;
 		this.tail = null;	
 	}
@@ -25,10 +25,41 @@ public class MyLinkedList<K> {
 			this.head = newNode;
 		}
 		else {
+			
 			INode<K>tempNode = this.head;
 			this.head = newNode;
 			this.head.setNext(tempNode);
+			sort();
 		}
+	}
+	/**
+	 * Method to sort the linked list
+	 * @return nothing
+	 */
+	public void sort() {
+		INode<K>current = this.head;
+		INode<K>index=null;
+		K temp;
+	    if(this.head == null) {
+	    	System.out.println("List is empty");
+	    }
+	    else
+	    {
+	        while(current != null)
+	        {
+	        	index = current.getNext();
+	            while(index != null) {
+	                    if((int)current.getKey()>(int)index.getKey()){
+	                        temp = current.getKey();
+	                        current.setKey(index.getKey());
+	                        index.setKey(temp);
+	                    }
+	                    index = index.getNext();
+	                }
+	              current = current.getNext();
+	          }
+	     }
+		
 	}
 	/**
 	 * this method to append a new element to the linked list
@@ -142,6 +173,8 @@ public class MyLinkedList<K> {
 	public void printMyNodes() {
 		System.out.println("My Nodes: "+head);
 	}
+	
+	
 	
 	
 }

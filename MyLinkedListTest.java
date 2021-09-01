@@ -1,6 +1,6 @@
 package linkedlist;
 
-import sun.jvm.hotspot.ui.tree.BadAddressTreeNodeAdapter;
+
 
 /**
  * the MyLinkedListTest class implements 
@@ -35,10 +35,10 @@ public class MyLinkedListTest {
 	 */
 	public static void addNewNode()
 	{
-		MyNode<Integer> myFirstNode = new MyNode<>(56);
-		MyNode<Integer> mySecondNode = new MyNode<>(30);
+		MyNode<Integer> myFirstNode = new MyNode<>(560);
+		MyNode<Integer> mySecondNode = new MyNode<>(300);
 		MyNode<Integer> myThirdNode = new MyNode<>(70);
-		MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+		SortedLinkedList<Integer> myLinkedList = new SortedLinkedList<Integer>();
 		myLinkedList.add(myFirstNode);
 		myLinkedList.add(mySecondNode);
 		myLinkedList.add(myThirdNode);
@@ -60,7 +60,7 @@ public class MyLinkedListTest {
 		MyNode<Integer> mySecondNode = new MyNode<>(30);
 		MyNode<Integer> myThirdNode = new MyNode<>(70);
 		
-		MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+		SortedLinkedList<Integer> myLinkedList = new SortedLinkedList<Integer>();
 		myLinkedList.add(myFirstNode);
 		myLinkedList.append(mySecondNode);
 		myLinkedList.append(myThirdNode);
@@ -82,7 +82,7 @@ public class MyLinkedListTest {
 		MyNode<Integer> mySecondNode = new MyNode<>(30);
 		MyNode<Integer> myThirdNode = new MyNode<>(70);
 		
-		MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+		SortedLinkedList<Integer> myLinkedList = new SortedLinkedList<Integer>();
 		myLinkedList.add(myFirstNode);
 		myLinkedList.append(myThirdNode);
 		myLinkedList.insert(myFirstNode,mySecondNode);
@@ -102,7 +102,7 @@ public class MyLinkedListTest {
 		MyNode<Integer> mySecondNode = new MyNode<>(30);
 		MyNode<Integer> myThirdNode = new MyNode<>(56);
 		
-		MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+		SortedLinkedList<Integer> myLinkedList = new SortedLinkedList<Integer>();
 		myLinkedList.add(myFirstNode);
 		myLinkedList.add(mySecondNode);
 		myLinkedList.add(myThirdNode);
@@ -119,7 +119,7 @@ public class MyLinkedListTest {
 		MyNode<Integer> mySecondNode = new MyNode<>(30);
 		MyNode<Integer> myThirdNode = new MyNode<>(56);
 		
-		MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+		SortedLinkedList<Integer> myLinkedList = new SortedLinkedList<Integer>();
 		myLinkedList.add(myFirstNode);
 		myLinkedList.add(mySecondNode);
 		myLinkedList.add(myThirdNode);
@@ -137,7 +137,7 @@ public class MyLinkedListTest {
 		MyNode<Integer> mySecondNode = new MyNode<>(30);
 		MyNode<Integer> myThirdNode = new MyNode<>(56);
 	
-		MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+		SortedLinkedList<Integer> myLinkedList = new SortedLinkedList<Integer>();
 		myLinkedList.add(myFirstNode);
 		myLinkedList.add(mySecondNode);
 		myLinkedList.add(myThirdNode);
@@ -159,7 +159,7 @@ public class MyLinkedListTest {
 		MyNode<Integer> myThirdNode = new MyNode<>(70);
 		MyNode<Integer> myFourthNode = new MyNode<>(40);
 		
-		MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+		SortedLinkedList<Integer> myLinkedList = new SortedLinkedList<Integer>();
 		myLinkedList.add(myFirstNode);
 		myLinkedList.append(mySecondNode);
 		myLinkedList.append(myThirdNode);
@@ -179,7 +179,7 @@ public class MyLinkedListTest {
 		MyNode<Integer> mySecondNode = new MyNode<>(30);
 		MyNode<Integer> myThirdNode = new MyNode<>(40);
 		MyNode<Integer> myFourthNode = new MyNode<>(70);
-		MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+		SortedLinkedList<Integer> myLinkedList = new SortedLinkedList<Integer>();
 		myLinkedList.add(myFirstNode);
 		myLinkedList.append(mySecondNode);
 		myLinkedList.append(myThirdNode);
@@ -191,13 +191,13 @@ public class MyLinkedListTest {
 	}
 	public static void main(String [] args) {
 		//createLinkedlist();
-		//addNewNode();
+		addNewNode();
 		//appendNode();
 		//insertBetween();
 		//deleteFirst();
 		//deleteLast();
 		//search();
-		insertAfterSpecified();
-		deleteAfterSpecified();
+		//insertAfterSpecified();
+		//deleteAfterSpecified();
 	}
 }
